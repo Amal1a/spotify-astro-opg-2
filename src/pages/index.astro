@@ -1,4 +1,8 @@
 ---
+import "../styles/main.css";
+import Category from "../components/Category.astro";
+import Layout from "../layouts/Layout.astro";
+import Topnav from "../components/Topnav.astro";
 ---
 
 <html lang="en">
@@ -7,10 +11,18 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="main.css" />
     <title>Astro</title>
   </head>
   <body>
     <h1>Astro</h1>
+    <Layout title="Welcome to Astro">
+      <div class="FrontPage">
+        <Topnav />
+        <div class="categorylist">
+          <Category title="Focus" />
+          <Category title="Spotify Playlists" />
+        </div>
+      </div>
+    </Layout>
   </body>
 </html>
